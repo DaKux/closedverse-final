@@ -24,8 +24,11 @@ PROD = True
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# Also, change this if you are using this in production.
+# A good website to generate them is https://www.miniwebtool.com/django-secret-key-generator/
 SECRET_KEY = 'pj=uvnf)+%!qegr7%$5by09d7fmr@%npegjv-=pf)hl#@a(44*'
 
+# This was mostly meant for just me, but you can change it.
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'thetrashkittens.ga'
 ]
 
@@ -39,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	#pip3 install django-markdown-deux django-markdown2
+	# make sure to install these!
+	# pip3 install django-markdown-deux django-markdown2
 	'markdown_deux',
     'closedverse_main',
 ]
@@ -77,6 +81,7 @@ WSGI_APPLICATION = 'closedverse.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+# I prefer PostgreSQL, but you can use MySQL if you want.
 
 DATABASES = {
     'default': {
@@ -147,6 +152,7 @@ MEDIA_URL = '/i/'
 
 # Closedverse settings
 # reCAPTCHA v2 keys, None for no reCAPTCHA
+# use these
 recaptcha_pub = None
 recaptcha_priv = None
 
@@ -163,9 +169,9 @@ memo_msg = "You will NOT hack Oasis. That would also be mean."
 memo_title = "Can I become Moderator, I'd love to help?!?!"
 memo_msg = "Oasis is different. You have to be elected by your fellow users to get the power to enforce the rules. Also, please do not send me photos of your legs. That is bad. Do not."
 memo_title = "Is this open source?!?"
-memo_msg = "Yeah! https://github.com/Pikacraft64/oasis, but reminder, the code is a modification of Closedverse's"
+memo_msg = "Yeah! https://github.com/stampylongr/oasisclosed, but reminder, the code is a modification of Closedverse's"
 memo_title = "Any ways to contact you?"
-memo_msg = "Yeah! We have a contact page, and a discord sever! https://discord.gg/62Vnez2. Ask someone if the link doesn't work."
+memo_msg = "Yeah! We have a contact page."
 
 # Client key to use for iphub.email, because we're using that
 # None for no IP checking (recommended since this is so slow)
