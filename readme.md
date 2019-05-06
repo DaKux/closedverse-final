@@ -2,6 +2,9 @@
 look up closedverse on githubkthanksbye
 
 # Requirements
+```console
+$ pip3 install Django urllib3 lxml passlib bcrypt pillow imghdr django-markdown-deux django-markdown2 sentry-sdk
+```
   * Python 3.6.2?
   * Django
   * urllib3?
@@ -12,6 +15,7 @@ look up closedverse on githubkthanksbye
   * pillow
   * imghdr?
   * markdown
+  * sentry-sdk
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
