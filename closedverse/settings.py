@@ -216,3 +216,7 @@ inactive_redirect = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 # Option to delete image if it's local
 # 0 - keep, 1 - move to 'rm' folder, 2 - DELETE
 image_delete_opt = 2
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
