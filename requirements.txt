@@ -1,0 +1,11 @@
+Django
+django-heroku
+gunicorn
+urllib3
+lxml
+passlib
+bcrypt
+mysqlclient
+pillow
+django-markdown-deux
+django-markdown2
