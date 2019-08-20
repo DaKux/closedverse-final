@@ -1,5 +1,5 @@
 # Oasis
-look up closedverse on githubkthanksbye
+A modified version of Closedverse/Oasis
 
 # Requirements
 ```console
