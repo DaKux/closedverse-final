@@ -9,3 +9,4 @@ mysqlclient
 pillow
 django-markdown-deux
 django-markdown2
+whitenoise
