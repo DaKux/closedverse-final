@@ -1,0 +1,42 @@
+#   A basic travis.yml boilerplate for Django projects
+#
+#   The set-up assumes a postgreSQL database.
+#
+#   Replace the following variables in the code:
+# * your_project_settings
+# * your_github_username
+# * your_repo
+
+language: python
+
+python:
+  - 3.6.2
+
+services: postgresql
+
+env:
+  - DJANGO=2.1
+
+before_install:
+  - export PYTHONPATH=$HOME/builds/stampylongr/closedverse
+  - export PIP_USE_MIRRORS=true
+
+install:
+  - pip3 install django==$DJANGO --quiet
+  - pip3 install psycopg2 --quiet
+  - pip3 install urllib3 --quiet
+  - pip3 install lxml --quiet
+  - pip3 install passlib --quiet
+  - pip3 install requests --quiet
+  - pip3 install bcrypt --quiet
+  - pip3 install pillow --quiet
+  - pip3 install django-markdown-deux --quiet
+  - pip3 install django-markdown2 --quiet
+
+before_script:
+  - psql -c "CREATE DATABASE mydb;" -U postgres
+
+script:
+  - python3 manage.py makemigrations
+  - python3 manage.py makemigrations closedverse_main
+  - python3 manage.py migrate
