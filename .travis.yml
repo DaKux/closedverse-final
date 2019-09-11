@@ -32,7 +32,6 @@ install:
   - pip3 install pillow --quiet
   - pip3 install django-markdown-deux --quiet
   - pip3 install django-markdown2 --quiet
-  - pip3 install django-heroku --quiet
 
 before_script:
   - psql -c "CREATE DATABASE mydb;" -U postgres
