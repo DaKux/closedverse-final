@@ -1,4 +1,4 @@
-# Oasis
+# Oasis [![Build Status](https://travis-ci.com/stampylongr/oasisclosed.svg?branch=master)](https://travis-ci.com/stampylongr/oasisclosed)
 A modified version of Closedverse/Oasis
 
 # Requirements
