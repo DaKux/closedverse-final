@@ -162,5 +162,53 @@ $ sudo systemctl daemon-reload
 $ sudo systemctl restart gunicorn
 ```
 
+Now, for NGINX.
+
+Open a file using this command below:
+```console
+$ sudo nano /etc/nginx/sites-available/oasis
+```
+
+Paste the following inside:
+```nginx
+server {
+    listen 80;
+    server_name insert_server_domain_here;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /s/ {
+        root /home/YOUR_USERNAME_HERE/oasisclosed/s;
+    }
+    location /i/ {
+        root /home/YOUR_USERNAME_HERE/oasisclosed/media;
+    }
+    
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+```
+
+Now link the files:
+```console
+$ sudo ln -s /etc/nginx/sites-available/oasis /etc/nginx/sites-enabled
+```
+
+And run the NGINX test:
+```console
+$ sudo nginx -t
+```
+
+Now resart NGINX, and enable the firewall:
+```console
+$ sudo systemctl restart nginx
+$ sudo ufw allow 'Nginx Full'
+```
+
+That's it!
+
+If you want SSL, use [this](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04) guide by DigitalOcean.
+
 # Copyright
 Copyright 2019 Robby Wilcox, all rights reserved to their respective owners. (Arian Kordi, Pip, Nintendo, Hatena Co Ltd.)
