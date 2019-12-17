@@ -1,0 +1,8 @@
+Django
+urllib3
+lxml
+passlib
+bcrypt
+pillow
+django-markdown-deux
+django-markdown2
