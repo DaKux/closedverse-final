@@ -97,7 +97,6 @@ if 'TRAVIS' in os.environ:
             'PORT':     '',
         }
     }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
