@@ -61,8 +61,9 @@ $ source oasis_env/bin/activate
 ```
 And install the requirements with the following:
 ```console
-$ pip install -r requirements
+$ pip install -r requirements.txt
 $ pip install psycopg2
+$ pip install gunicorn
 ```
 Edit your settings using:
 ```console
