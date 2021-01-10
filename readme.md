@@ -210,6 +210,3 @@ $ sudo ufw allow 'Nginx Full'
 That's it!
 
 If you want SSL, use [this](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04) guide by DigitalOcean.
-
-# Copyright
-Copyright 2019 Robby Wilcox, all rights reserved to their respective owners. (Arian Kordi, Pip, Nintendo, Hatena Co Ltd.)
