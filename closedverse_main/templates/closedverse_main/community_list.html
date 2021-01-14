@@ -3,9 +3,11 @@
 <div class="community-main">
 		<div id="community-eyecatch"></div>
 	</div>
-	<div class="community-top-sidebar">
+          	<div class="community-top-sidebar">
 		<form action="{% url "main:community-search" %}" class="search">
-			<input maxlength="32" name="query" placeholder="Search all communities" type="text"><input title="Search" type="submit" value="q">
+			<input maxlength="32" name="query" placeholder="Search all Communities" type="text"><input title="Search" type="submit" value="q">
+
+
 		</form>
 		<!--
 		<div id="identified-user-banner">
@@ -15,8 +17,21 @@
 		<div class="post-list-outline index-memo">
 			<h2 class="label">{{ settings.memo_title }}</h2>
 			{% autoescape off %}{{ settings.memo_msg }}{% endautoescape %}
+             		<h2>What is this? I thought it died a year ago!</h2>
+		        <li>Yes it did. But I wish to rehost it! Don't worry this is the last time I promise (and for real this time.) <3</li>    
+             		<h2>Will Closedverse HACK me?!?</h2>
+			<li>Yep.</li>
+            		<h2>Will I HACK Closedverse?!?</h2>
+			<li>No.</li>
+            		<h2>I want to be MOD.</h2>
+			<li>We don't need Mods.</li>
+            		<h2>Ingdido? LOL! Gay logo!</h2>
+			<li>Mad mad mad mad mad cry cry cry cry cry you're cringe cringe cringe!</li>
+                        <img src="https://cdn.discordapp.com/attachments/772582110778228739/797477614020853760/220px-Trollface_non-free.png"
+
 		</div>
 		{% endif %}
+
 	</div>
 	<div class="community-main">
 	{% if favorites %}
@@ -55,7 +70,7 @@
 			<a class="arrow-button" href="{% url "main:help-legal" %}"><span>Legal information</span></a>
 			<a class="arrow-button" href="{% url "main:help-contact" %}"><span>Contact information</span></a>
 			{% endif %}
-			<a class="arrow-button" href="https://pf2m.com/openverse/"><span>Info about Openverse</span></a>
+			<a class="arrow-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span>Info about Openverse</span></a>
 		</div>
 	</div>
 {% endblock %}

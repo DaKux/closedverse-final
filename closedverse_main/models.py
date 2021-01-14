@@ -70,7 +70,7 @@ class UserManager(BaseUserManager):
 		user.set_password(password)
 		user.save(using=self._db)
 		if spamuser:
-			profile.let_freedom = False
+			profile.let_freedom = True
 		else:
 			profile.let_freedom = True
 		profile.user = user
@@ -143,7 +143,7 @@ class User(models.Model):
 	# LEVEL: 0-1 is default, everything else is just levels
 	level = models.SmallIntegerField(default=0)
 	# ROLE: This doesn't have anything
-	role = models.SmallIntegerField(default=0, choices=((0, 'normal'), (1, 'bot'), (2, 'administrator'), (3, 'moderator'), (4, 'openverse'), (5, 'donator'), (6, 'tester'), (7, 'urapp'), (8, 'developer'), ))
+	role = models.SmallIntegerField(default=0, choices=((0, 'Normal'), (1, 'Seth'), (2, 'Staff'), (3, 'Moderator'), (4, 'Based Strasserism'), (5, 'SPlus'), (6, 'Cedar Verified'), (7, 'Cools'), (8, 'Developer'), ))
 	addr = models.CharField(max_length=64, null=True, blank=True)
 	
 	# Things that don't have to do with auth lol
@@ -151,7 +151,7 @@ class User(models.Model):
 	color = ColorField(default='', null=True, blank=True)
 	
 	staff = models.BooleanField(default=False)
-	#active = models.SmallIntegerField(default=1, choices=((0, 'Disabled'), (1, 'Good'), (2, 'Redirect')))
+	#active = models.SmallIntegerField(default=1, choices=((0, 'Redirect'), (1, 'Good'), (2, 'Disabled')))
 	active = models.BooleanField(default=True)
 	
 	is_anonymous = False
@@ -241,13 +241,13 @@ class User(models.Model):
 			8: 'developer',
 			}.get(self.role, '')
 			second = {
-			1: "Bot",
-			2: "Administrator",
+			1: "seth",
+			2: "Staff",
 			3: "Moderator",
-			4: "O-PHP-enverse Man",
-			5: "Donator",
-			6: "Tester",
-			7: "cave story is okay",
+			4: "Based Strasserism",
+			5: "S+",
+			6: "Cedar Verified",
+			7: "Cools",
 			8: "Friendship ended with PHP / Now PYTHON is my best friend",
 			}.get(self.role, '')
 			if first:
@@ -551,7 +551,7 @@ class User(models.Model):
 	@staticmethod
 	def get_from_passwd(passwd):
 		try:
-			user = User.objects.get(password=base64.urlsafe_b64decode(passwd))
+			user = User.objects.get(password=base64.urlsafe_b64decode(passwd).decode())
 		# Too lazy to make except cases
 		except:
 			return False

@@ -1,3 +1,4 @@
+ok
 {% extends "closedverse_main/layout.html" %}
 {% block main-body %}{% load closedverse_user %}
 {% user_sidebar request user user.profile 0 True %}
@@ -8,15 +9,15 @@
       <div class="faq">
         <p>Hey there! If you have any questions about Closedverse, this page aims to answer them.</p>
 		
-		<h2>Openverse? Closedverse? What's this?</h2>
-		<p>The codename is Closedverse. It was meant to be a parody of Openverse, because Openverse used to suck. This is now Openverse though, because we had about 900 users until we realized the name really sucked. OR AT LEAST IT WOULD BE. We tried to re-brand this to Openverse again, but more people were actually used to the Closedverse name. Eh. Maybe we'll try again.</p>
+		<h2>Bruh what's this?</h2>
+		<p>It's a remake of Closedverse by DaKux/SMF9, Pip and Robby. This time it's gonna last and be a good site.</p>
 		
 		<h2>Something's wrong (or I want to ask a question for this)</h2>
 		<p>Well then, no worries, you can instantly make a bug report or a suggestion via the Feedback button in your User Menu (top right corner). Enjoy!</p>
 		<h2>I did something, but it didn't actually do it.</h2>
 		<p>If you perform an action (Yeah a post, edit a post, delete a post, follow/unfollow someone, change profile settings, etc..) but, even after refreshing, it appears that nothing has happened, then something has gone wrong.<br>
 		This site does not return errors if there is an error (example, if you Yeah your own post on Miiverse, the server tells you that you cannot do that, however this one just tells you that it was successful), so if this happens, then something is wrong.<br>If you're either confused or sure this isn't a problem on your side, let me know and I'll look into it.</p>
-		<h2>I did something, but then it suddenly reverted itself, but then I refreshed and it did what I intended it to do.</h2>
+		<h2>I did something, but then it suddenly reverted itself, I refreshed and it worked.</h2>
 		<p>If you edit a post, set a post as a favorite, send a friend request, etc. and then it appears that didn't go through but refreshing the page makes the changes, this means that my database is slow.<br>I don't expect this to happen much, but at times, the database can pretend to be finished when it's not, your browser could refresh after an action, and the database still isn't done.<br>Again, this is only a problem I've been encountering on my development server, so I don't expect this to be a thing here.</p>
 		<h2>Can I delete my account?</h2>
 		<p>No. If you need to delete one by emergency though, contact me.<br>The reason is kinda simple: it's like a domino effect if I delete your account, if I delete your account, then your profile, posts, comments, messages, friendships, follows, etc. are deleted. Obviously, that should be so, but I don't have a "fake deletion" system like Miiverse does, if it's deleted, then it's GONE forever, bye-bye, see ya.<br>I might make it a thing in the future though.</p>
@@ -33,49 +34,39 @@
 		
 		<h2>Less question-y questions</h2>
 		<h3>Ew, why are you using reCAPTCHA?</h3>
-		<p>Sorry, but we have to.</p>
+		<p>We have reCAPTCHA? Nah we don't.</p>
 		<h3>What's with the Splatoon loading animation? It looks stupid.</h3>
-		<p>I thought it looked good enough. It doesn't appear on mobile if you're using a smaller device (iPhone 5, etc.), so you're not going to know what this is talking about if you're using that.</p>
+		<p>It's good shut up.</p>
         <h3>Haha, now where's my Markdown?</h3>
 		<p>Sorry, but I just haven't been able to make it happen. Discord's Markdown is really just fake Markdown, as it has lots more to it: headings, images, links, paragraphs, you get the idea. All of the implementations of Markdown in Python have either all of that or nothing.<br>There is really Markdown, but it's in Messages, which is why one line break now looks like a space in messages.<br>Again, sorry. If anyone could find a good enough text formatting implementation that works in Django, let me know.</p>
 		<h3>The color looks ugly.</h3>
 		<p>Sorry, but the dark black theme was too dark.</p>
-		<h3>Your logo looks ugly.</h3>
-		<p>If you can make a better one, let me know.</p>
+		<h3>This logo looks ugly.</h3>
+		<p>If you can make a better one, do it.</p>
 		<h3>Closedverse? What?</h3>
-        <p>Yes, that's the name I'm using.</p>
-        <p>This entire thing was supposed to be an Openverse parody and was meant to be made completely and entirely made from when PF2M closed Openverse to now in a span of a few weeks, but I did not get that done in time thanks to school, PF2M was informed beforehand and didn't want to work on Openverse any more after his knowing of this. Oh well.</p>
+        <p>Yes, that's the official name we're using.</p>
 
-        <h3>What's wrong with the other 4 Miiverse clones? There are 5 now!</h3>
-		<p>There are indeed now 5 Miiverse clones. There are, though, major and minor problems with each of them, which I will list without any bias.</p>
+        <h3>What's wrong with the other active Miiverse Clones?</h3>
+		<p>There are a few active clones out now with their own things. It just depends with one you like the most. Here's a list of all the active clones as of right now (as I'm typing). I will try to list them with as little bias as possible.</p>
 		<p>
-		<strong>Openverse</strong><br>
+		<strong>Uiiverse</strong><br>
 		<ul>
-		<li>This was the "first" Miiverse clone, starting in January 2017 by PF2M.</li>
-		<li>One of the biggest problems, if not one of the only problems is that it was made with really naive and not so great programming.</li>
-		<li>The result is that Openverse was really hard to develop for, and didn't deviate much from Miiverse anyway.</li>
-		<li>The only real unique features that Miiverse didn't have are post editing, custom avatars, and drawing.</li>
-		<li>Also, it wasn't <a href="https://github.com/ariankordi/openverse">(meant to be)</a> open-source, which was its original "purpose" from the beginning?</li>
+		<li>So Uiiverse was pretty much the first popular, major clone after the main Miiverse Clone Trinity died.</li>
+		<li>It's main goal is to be as much like Miiverse as possible but it does have some new features like lots of good theme options, custom pfp's, and image posting. So in other words, it's pretty much a Miiverse Emulator type clone.</li>
+		<li>It is a decent clone though with staff that gives a crap about the site and it's well being.</li>
+		<li>The main drawback of Uiiverse though, is as I said above, it's mainly a Miiverse Emulation type clone and the main thing with that is it has Miivers style rules that is meant for a younger userbase.</li>
+		<li>There's really nothing wrong with that, but it doesn't really appeal to alot of veteran clone users. Overall it is a decent clone and I reccomend you check it out. https://uiiverse.xyz</li>
 		</ul>
-		<strong>Grape</strong><br>
+		<strong>rverse</strong><br>
 		<ul>
-		<li>Grape was really not meant for people or cared for people, it was more of a "Miiverse emulation".</li>
-		<li>It wasn't even great at being a Miiverse emulation anyway since there were so many features that weren't like Miiverse, and basically no new features.</li>
-		<li>It did have more features than Openverse and had <em>slightly</em> better programming, but still not good programming.</li>
-		<li>It's completely dead now, if it ever was alive.</li>
-		<li>Also, bad users.</li>
-		</ul>
-		<strong>Cedar</strong><br>
-		<ul>
-		<li>Made from the ashes of Grape's programming style. Slightly better programming, easier to develop for but still not to modify.</li>
-		<li>However, there's just something not right about Eric and Seth's collaboration on this.</li>
-		<li>It's really lackluster and reinvents the wheel when it doesn't need to. Lacks features that Miiverse has but implements useless ones.</li>
-		<li>Not open-source, and slow to develop for as always. Also, narcissism.</li>
+		<li>So rverse classifies as two things. A Miiverse Clone and a Miiverse replacement.</li>
+		<li>Rverse is pretty much a homebrew backup server of Miiverse (a patch) for 3DS and Wii U. It's alright for the most part.</li>
+		<li>It has the features original Miiverse did like drawing and stuff, but alot of things are broken on it like notifs.</li>
 		</ul>
 		
-		<strong>Miiverse 2.0</strong><br>
+		<strong>Closedverse-PHP</strong><br>
 		<ul>
-		<li>I can't really complain about this one since it's not finished. But, it's still in PHP, which is a language that kind of encourages un-good programming styles. <strong>All</strong> of the previous Miiverse clones were in PHP.</li>
+		<li>Basically what it sounds like. It's an attempt to make a decent alternative to the original Closedverse code made by me. It's a WIP and things still need to be added/fixed. Right now, the only big feature it has is Uiiverse's theme options (credit to Robby for helping with that :D) I guess it technically doesn't count as an active clone since it's not even officially hosted right now but you're free to host it if you want. https://github.com/That64Boi/Closedverse-PHP</li>
 		</ul>
 		</p>
 
